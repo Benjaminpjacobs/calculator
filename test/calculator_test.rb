@@ -1,8 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/calculator'
-require 'pry'
-
 
 class CalculatorTest < Minitest::Test
   def test_it_exits
@@ -29,12 +27,12 @@ class CalculatorTest < Minitest::Test
     calc.subtract(10,2)
     assert_equal 8, calc.total
   end
-  def test_add_can_take_multiple_args
+  def test_add_can_take_one_arg
     calc = Calculator.new
     calc.add(10)
     assert_equal 10, calc.total
   end
-  def test_subtract_can_take_multiple_args
+  def test_subtract_can_take_one_arg
     calc = Calculator.new
     calc.subtract(10)
     assert_equal -10, calc.total
